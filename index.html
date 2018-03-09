@@ -5,17 +5,19 @@
 	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-	<header id="header">
-		<div></div>
-		<form>
-			<input type="text" name="search" id="search" placeholder="Search for items to shop" />
-			<button type="submit" name="searchButton" id="searchButton">search</button>
-		</form>
-		<div>
+	<header id="header" class="clearfix">
+		<div id="headRight" class="floatRight">
 			<a href="#">Sell on Etsy</a>
 			<a href="#">Register</a>
 			<button>Sign In</button>
 			<a href="#">Cart</a>
+		</div>
+		<div id="headLeft" class="floatLeft flexParent">
+			<a href="#"><img src="http://placehold.it/50/50"/></a>
+			<form>
+				<input type="text" name="search" id="search" placeholder="Search for items to shop" />
+				<button type="submit" name="searchButton" id="searchButton">search</button>
+			</form>
 		</div>
 	</header>
 	<div id="categoryBar">
@@ -32,7 +34,8 @@
 	</div> <!-- Category Bar -->
 	<div id="recommendations">
 		<ul>
-			<li>Whiskey Glass Personalized</li>
+			<li>Whiskey Decanter</li>
+			<li>Whiskey Glasses</li>
 		</ul>
 	</div> <!-- Recommendations -->
 	<div id="main">
@@ -46,97 +49,150 @@
 			</div>
 			<div class="sideCategory" id="shippingSide">
 				<h5>Shipping</h5>
-				<input type="checkbox" name="freeShip" id="freeShip"/>
-				<label>Free shipping</label>
-				<input type="checkbox" name="oneDayShip" id="oneDayShip"/>
-				<label>Ready to ship in 1 business day</label>
-				<input type="checkbox" name="threeDayShip" id="threeDayShip"/>
-				<label>Ready to ship in 3 business days</label>
+				<div class="inputWrapper">
+					<input type="checkbox" name="freeShip" id="freeShip"/>
+					<label>Free shipping</label>
+				</div>
+				<div class="inputWrapper">
+					<input type="checkbox" name="oneDayShip" id="oneDayShip"/>
+					<label>Ready to ship in 1 business day</label>
+				</div>
+				<div class="inputWrapper">
+					<input type="checkbox" name="threeDayShip" id="threeDayShip"/>
+					<label>Ready to ship in 3 business days</label>
+				</div>
 			</div>
 			<div class="sideCategory" id="offersSide">
 				<h5>Special Offers</h5>
-				<input type="checkbox" name="onSale" id="onSale"/>
-				<label>On sale</label>
+				<div class="inputWrapper">
+					<input type="checkbox" name="onSale" id="onSale"/>
+					<label>On sale</label>
+				</div>	
 			</div>
 			<div class="sideCategory" id="colorSide">
 				<h5>Color</h5>
-				<input type="checkbox" name="clearChk" id="clearChk"/>
-				<label>Clear</label>
-				<input type="checkbox" name="whiteChk" id="whiteChk"/>
-				<label>White</label>
-				<input type="checkbox" name="blackChk" id="blackChk"/>
-				<label>Black</label>
+				<div class="inputWrapper">
+					<input type="checkbox" name="clearChk" id="clearChk"/>
+					<label>Clear</label>
+				</div>	
+				<div class="inputWrapper">
+					<input type="checkbox" name="whiteChk" id="whiteChk"/>
+					<label>White</label>
+				</div>
+				<div class="inputWrapper">
+					<input type="checkbox" name="blackChk" id="blackChk"/>
+					<label>Black</label>
+				</div>
 				<button>+Show more</button>
 			</div>
 			<div class="sideCategory" id="occasionSide">
 				<h5>Occasion</h5>
-				<input type="checkbox" name="wedding" id="wedding"/>
-				<label>Wedding</label>
-				<input type="checkbox" name="birthday" id="birthday"/>
-				<label>Birthday</label>
+				<div class="inputWrapper">
+					<input type="checkbox" name="wedding" id="wedding"/>
+					<label>Wedding</label>
+				</div>
+				<div class="inputWrapper">
+					<input type="checkbox" name="birthday" id="birthday"/>
+					<label>Birthday</label>
+				</div>
 				<button>+Show more</button>
 			</div>
 			<div class="sideCategory" id="holidaySide">
 				<h5>Holiday</h5>
-				<input type="checkbox" name="christmas" id="christmas"/>
-				<label>Christmas</label>
-				<input type="checkbox" name="fathersDay" id="fathersDay"/>
-				<label>Father's Day</label>
+				<div class="inputWrapper">
+					<input type="checkbox" name="christmas" id="christmas"/>
+					<label>Christmas</label>
+				</div>
+				<div class="inputWrapper">
+					<input type="checkbox" name="fathersDay" id="fathersDay"/>
+					<label>Father's Day</label>
+				</div>
 				<button>+Show more</button>
 			</div>
 			<div class="sideCategory" id="materialSide">
 				<h5>Material</h5>
-				<input type="checkbox" name="glass" id="glass"/>
-				<label>Glass</label>
-				<input type="checkbox" name="wood" id="wood"/>
-				<label>Wood</label>
+				<div class="inputWrapper">
+					<input type="checkbox" name="glass" id="glass"/>
+					<label>Glass</label>
+				</div>
+				<div class="inputWrapper">
+					<input type="checkbox" name="wood" id="wood"/>
+					<label>Wood</label>
+				</div>
 				<button>+Show more</button>
 			</div>
 			<div class="sideCategory" id="personalSide">
 				<h5>Can be personalized</h5>
-				<input type="checkbox" name="personalYes" id="personalYes"/>
-				<label>Yes</label>
-				<input type="checkbox" name="personalNo" id="personalNo"/>
-				<label>No</label>
+				<div class="inputWrapper">
+					<input type="checkbox" name="personalYes" id="personalYes"/>
+					<label>Yes</label>
+				</div>
+				<div class="inputWrapper">
+					<input type="checkbox" name="personalNo" id="personalNo"/>
+					<label>No</label>
+				</div>
 			</div>
 			<div class="sideCategory" id="locationSide">
 				<h5>Shop location</h5>
-				<input type="radio" name="anywhereLoc" id="anywhereLoc"/>
-				<label>Anywhere</label>
-				<input type="radio" name="usaLoc" id="usaLoc"/>
-				<label>United States</label>
-				<input type="radio" name="customLoc" id="customLoc"/>
-				<label>Custom</label>
-				<input type="text" name="customLocField" id="customLocField" placeholder="Enter location"/>
-				<button>&#9654</button>
+				<div class="inputWrapper">
+					<input type="radio" name="radioLoc" id="anywhereLoc"/>
+					<label>Anywhere</label>
+				</div>
+				<div class="inputWrapper">
+					<input type="radio" name="radioLoc" id="usaLoc"/>
+					<label>United States</label>
+				</div>
+				<div class="inputWrapper">
+					<input type="radio" name="radioLoc" id="customLoc"/>
+					<label>Custom</label>
+					<input type="text" name="customLocField" id="customLocField" placeholder="Enter location"/>
+					<button>&#9654</button>
+				</div>
 			</div>
 			<div class="sideCategory" id="typeSide">
 				<h5>Item type</h5>
-				<input type="radio" name="allType" id="allType"/>
-				<label>All items</label>
-				<input type="radio" name="handmadeType" id="handmadeType"/>
-				<label>Handmade</label>
-				<input type="radio" name="vintageType" id="vintageType"/>
-				<label>Vintage</label>
+				<div class="inputWrapper">
+					<input type="radio" name="radioType" id="allType"/>
+					<label>All items</label>
+				</div>
+				<div class="inputWrapper">
+					<input type="radio" name="radioType" id="handmadeType"/>
+					<label>Handmade</label>
+				</div>
+				<div class="inputWrapper">
+					<input type="radio" name="radioType" id="vintageType"/>
+					<label>Vintage</label>
+				</div>
 			</div>
 			<div class="sideCategory" id="priceSide">
 				<h5>Price ($)</h5>
-				<input type="radio" name="anyPrice" id="anyPrice"/>
-				<label>Any Price</label>
-				<input type="radio" name="under25" id="under25"/>
-				<label>Under $25</label>
-				<input type="radio" name="customPrice" id="customPrice"/>
-				<input type="text" name="customPriceMin" id="customPriceMin" placeholder="Low"/>
-				<span>To</span>
-				<input type="text" name="customPriceMax" id="customPriceMax" placeholder="High"/>
-				<button>&#9654</button>
+				<div class="inputWrapper">
+					<input type="radio" name="radioPrice" id="anyPrice"/>
+					<label>Any Price</label>
+				</div>
+				<div class="inputWrapper">
+					<input type="radio" name="radioPrice" id="under25"/>
+					<label>Under $25</label>
+				</div>
+				<div class="inputWrapper">
+					<input type="radio" name="radioPrice" id="customPrice"/>
+					<label>Custom</label>
+					<input type="text" name="customPriceMin" id="customPriceMin" placeholder="Low"/>
+					<span>To</span>
+					<input type="text" name="customPriceMax" id="customPriceMax" placeholder="High"/>
+					<button>&#9654</button>
+				</div>
 			</div>
 			<div class="sideCategory" id="optionsSide">
 				<h5>Ordering options</h5>
-				<input type="checkbox" name="giftcard" id="giftcard"/>
-				<label>Accepts Etsy gift cards</label>
-				<input type="checkbox" name="giftwrap" id="giftwrap"/>
-				<label>Can be gift-wrapped</label>
+				<div class="inputWrapper">
+					<input type="checkbox" name="giftcard" id="giftcard"/>
+					<label>Accepts Etsy gift cards</label>
+				</div>
+				<div class="inputWrapper">
+					<input type="checkbox" name="giftwrap" id="giftwrap"/>
+					<label>Can be gift-wrapped</label>
+				</div>
 			</div>
 			<div class="sideCategory" id="shiptoSide">
 				<h5>Ships to</h5>
@@ -154,14 +210,55 @@
 						<option>Australia</option>
 						<option>New Zealand</option>
 					</optgroup>
-
 				</select>
 			</div>
 		</div> <!-- Side Bar -->
-		<div id="resultsContainer">
-			<div></div>
-			<div></div>
-		</div> <!-- Results Container -->
+		<div id="mainContent">
+			<div id="aboveResults" class="clearfix">
+				<span class="floatLeft">All Categories</span>
+				<span class="floatRight">Sort by: Relevancy</span>
+			</div>
+			<div id="resultsContainer">
+				<div class="result">
+					<img src="https://img0.etsystatic.com/131/0/5528991/il_570xN.1042446460_989z.jpg" class="productImg" />
+					<p class="itemDescription">Lorem ipsum blah blah blah blah blah blah blah blah blah blah</p>
+					<h6 class="storeName">storename</h6>
+					<div>
+						<span>Stars</span><span>(55)</span>
+					</div>
+					<p><span>$</span>9.99</p>
+					<a href="#" class="similarItems">+see similar items</a>
+				</div>
+				<div class="result">
+					<img src="https://img0.etsystatic.com/131/0/5528991/il_570xN.1042446460_989z.jpg" class="productImg" />
+					<p>Lorem ipsum blah blah blah blah blah blah</p>
+					<h6>storename</h6>
+					<span>Stars</span><span>Numberofratings</span>
+					<span>$9.99</span>
+				</div>
+				<div class="result">
+					<img src="https://img0.etsystatic.com/131/0/5528991/il_570xN.1042446460_989z.jpg" class="productImg" />
+					<p>Lorem ipsum blah blah blah blah blah blah</p>
+					<h6>storename</h6>
+					<span>Stars</span><span>Numberofratings</span>
+					<span>$9.99</span>
+				</div>
+				<div class="result">
+					<img src="https://img0.etsystatic.com/131/0/5528991/il_570xN.1042446460_989z.jpg" class="productImg" />
+					<p>Lorem ipsum blah blah blah blah blah blah</p>
+					<h6>storename</h6>
+					<span>Stars</span><span>Numberofratings</span>
+					<span>$9.99</span>
+				</div>
+				<div class="result">
+					<img src="https://img0.etsystatic.com/131/0/5528991/il_570xN.1042446460_989z.jpg" class="productImg" />
+					<p>Lorem ipsum blah blah blah blah blah blah</p>
+					<h6>storename</h6>
+					<span>Stars</span><span>Numberofratings</span>
+					<span>$9.99</span>
+				</div>
+			</div> <!-- Results Container -->
+		</div> <!-- Main Content -->
 	</div> <!-- Main -->
 	<footer id="footer">
 		<p>Get fresh Etsy trends and unique gift ideas delivered right to your inbox.</p>
@@ -169,7 +266,7 @@
 			<input type="text" name="emailSub" id="emailSub" placeholder="Enter your email" />
 			<button type="submit" name="subscribe" id="subscribe">Subscribe</button>
 		</form>
-		<div id="footerLinks">
+		<div id="footerLinks"> <!-- Footer Nav Links -->
 			<div id="footShop">
 				<h4>Shop</h4>
 				<a href="#">Gift cards</a>
@@ -197,19 +294,19 @@
 				<a href="#">Pinterest</a>
 				<a href="#">Twitter</a>
 			</div>
-			<div>
-				<span>Need help? Visit the <a href="#">help center</a></span>
+		</div> <!-- Footer Nav Links End -->
+		<div>
+			<span>Need help? Visit the <a href="#">help center</a></span>
+		</div>
+		<div id="bottom" class="clearfix">
+			<div class="floatLeft">
+				<span>We make it easy to find your thing</span>
 			</div>
-			<div id="bottom">
-				<div>
-					<span>We make it easy to find your thing</span>
-				</div>
-				<div>
-					<span>&copy2018 Etsy, Inc.</span>
-					<a href="#">Terms of Use</a>
-					<a href="#">Privacy</a>
-					<a href="#">Interest-based ads</a>
-				</div>
+			<div class="floatRight">
+				<span>&copy2018 Etsy, Inc.</span>
+				<a href="#">Terms of Use</a>
+				<a href="#">Privacy</a>
+				<a href="#">Interest-based ads</a>
 			</div>
 		</div>
 	</footer>
