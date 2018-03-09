@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Etsy</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<header id="header">
+		<div></div>
+		<form>
+			<input type="text" name="search" id="search" placeholder="Search for items to shop" />
+			<button type="submit" name="searchButton" id="searchButton">search</button>
+		</form>
+		<div>
+			<a href="#">Sell on Etsy</a>
+			<a href="#">Register</a>
+			<button>Sign In</button>
+			<a href="#">Cart</a>
+		</div>
+	</header>
+	<div id="categoryBar">
+		<ul>
+			<li>Jewelry &amp Accessories</li>
+			<li>Clothing &amp Shoes</li>
+			<li>Home &amp Living</li>
+			<li>Wedding &amp Party</li>
+			<li>Toys &amp Entertainment</li>
+			<li>Art &amp Collectibles</li>
+			<li>Craft Supplies &amp Tools</li>
+			<li>Vintage</li>
+		</ul>
+	</div> <!-- Category Bar -->
+	<div id="recommendations">
+		<ul>
+			<li>Whiskey Glass Personalized</li>
+		</ul>
+	</div> <!-- Recommendations -->
+	<div id="main">
+		<div id="sideBar">
+			<div class="sideCategory" id="categoriesSide">
+				<h5>All Categories</h5>
+				<ul>
+					<li>Home &amp Living</li>
+				</ul>
+				<button>+Show more</button>
+			</div>
+			<div class="sideCategory" id="shippingSide">
+				<h5>Shipping</h5>
+				<input type="checkbox" name="freeShip" id="freeShip"/>
+				<label>Free shipping</label>
+				<input type="checkbox" name="oneDayShip" id="oneDayShip"/>
+				<label>Ready to ship in 1 business day</label>
+				<input type="checkbox" name="threeDayShip" id="threeDayShip"/>
+				<label>Ready to ship in 3 business days</label>
+			</div>
+			<div class="sideCategory" id="offersSide">
+				<h5>Special Offers</h5>
+				<input type="checkbox" name="onSale" id="onSale"/>
+				<label>On sale</label>
+			</div>
+			<div class="sideCategory" id="colorSide">
+				<h5>Color</h5>
+				<input type="checkbox" name="clearChk" id="clearChk"/>
+				<label>Clear</label>
+				<input type="checkbox" name="whiteChk" id="whiteChk"/>
+				<label>White</label>
+				<input type="checkbox" name="blackChk" id="blackChk"/>
+				<label>Black</label>
+				<button>+Show more</button>
+			</div>
+			<div class="sideCategory" id="occasionSide">
+				<h5>Occasion</h5>
+				<input type="checkbox" name="wedding" id="wedding"/>
+				<label>Wedding</label>
+				<input type="checkbox" name="birthday" id="birthday"/>
+				<label>Birthday</label>
+				<button>+Show more</button>
+			</div>
+			<div class="sideCategory" id="holidaySide">
+				<h5>Holiday</h5>
+				<input type="checkbox" name="christmas" id="christmas"/>
+				<label>Christmas</label>
+				<input type="checkbox" name="fathersDay" id="fathersDay"/>
+				<label>Father's Day</label>
+				<button>+Show more</button>
+			</div>
+			<div class="sideCategory" id="materialSide">
+				<h5>Material</h5>
+				<input type="checkbox" name="glass" id="glass"/>
+				<label>Glass</label>
+				<input type="checkbox" name="wood" id="wood"/>
+				<label>Wood</label>
+				<button>+Show more</button>
+			</div>
+			<div class="sideCategory" id="personalSide">
+				<h5>Can be personalized</h5>
+				<input type="checkbox" name="personalYes" id="personalYes"/>
+				<label>Yes</label>
+				<input type="checkbox" name="personalNo" id="personalNo"/>
+				<label>No</label>
+			</div>
+			<div class="sideCategory" id="locationSide">
+				<h5>Shop location</h5>
+				<input type="radio" name="anywhereLoc" id="anywhereLoc"/>
+				<label>Anywhere</label>
+				<input type="radio" name="usaLoc" id="usaLoc"/>
+				<label>United States</label>
+				<input type="radio" name="customLoc" id="customLoc"/>
+				<label>Custom</label>
+				<input type="text" name="customLocField" id="customLocField" placeholder="Enter location"/>
+				<button>&#9654</button>
+			</div>
+			<div class="sideCategory" id="typeSide">
+				<h5>Item type</h5>
+				<input type="radio" name="allType" id="allType"/>
+				<label>All items</label>
+				<input type="radio" name="handmadeType" id="handmadeType"/>
+				<label>Handmade</label>
+				<input type="radio" name="vintageType" id="vintageType"/>
+				<label>Vintage</label>
+			</div>
+			<div class="sideCategory" id="priceSide">
+				<h5>Price ($)</h5>
+				<input type="radio" name="anyPrice" id="anyPrice"/>
+				<label>Any Price</label>
+				<input type="radio" name="under25" id="under25"/>
+				<label>Under $25</label>
+				<input type="radio" name="customPrice" id="customPrice"/>
+				<input type="text" name="customPriceMin" id="customPriceMin" placeholder="Low"/>
+				<span>To</span>
+				<input type="text" name="customPriceMax" id="customPriceMax" placeholder="High"/>
+				<button>&#9654</button>
+			</div>
+			<div class="sideCategory" id="optionsSide">
+				<h5>Ordering options</h5>
+				<input type="checkbox" name="giftcard" id="giftcard"/>
+				<label>Accepts Etsy gift cards</label>
+				<input type="checkbox" name="giftwrap" id="giftwrap"/>
+				<label>Can be gift-wrapped</label>
+			</div>
+			<div class="sideCategory" id="shiptoSide">
+				<h5>Ships to</h5>
+				<select>
+					<option>Choose country...</option>
+					<optgroup>
+						<option>Foo</option>
+						<option>Bar</option>
+						<option>United States</option>
+						<option>United Kingdom</option>
+					</optgroup>
+					<optgroup>
+						<option>Fizz</option>
+						<option>Buzz</option>
+						<option>Australia</option>
+						<option>New Zealand</option>
+					</optgroup>
+
+				</select>
+			</div>
+		</div> <!-- Side Bar -->
+		<div id="resultsContainer">
+			<div></div>
+			<div></div>
+		</div> <!-- Results Container -->
+	</div> <!-- Main -->
+	<footer id="footer">
+		<p>Get fresh Etsy trends and unique gift ideas delivered right to your inbox.</p>
+		<form>
+			<input type="text" name="emailSub" id="emailSub" placeholder="Enter your email" />
+			<button type="submit" name="subscribe" id="subscribe">Subscribe</button>
+		</form>
+		<div id="footerLinks">
+			<div id="footShop">
+				<h4>Shop</h4>
+				<a href="#">Gift cards</a>
+				<a href="#">Etsy blog</a>
+				<a href="#">Wholesale</a>
+			</div>
+			<div id="footSell">
+				<h4>Sell</h4>
+				<a href="#">Sell on Etsy</a>
+				<a href="#">Teams</a>
+				<a href="#">Forums</a>
+			</div>
+			<div id="footAbout">
+				<h4>About</h4>
+				<a href="#">Etsy, Inc.</a>
+				<a href="#">Policies</a>
+				<a href="#">Investors</a>
+				<a href="#">Careers</a>
+				<a href="#">Press</a>
+			</div>
+			<div id="footSocial">
+				<h4>Follow Etsy</h4>
+				<a href="#">Facebook</a>
+				<a href="#">Instagram</a>
+				<a href="#">Pinterest</a>
+				<a href="#">Twitter</a>
+			</div>
+			<div>
+				<span>Need help? Visit the <a href="#">help center</a></span>
+			</div>
+			<div id="bottom">
+				<div>
+					<span>We make it easy to find your thing</span>
+				</div>
+				<div>
+					<span>&copy2018 Etsy, Inc.</span>
+					<a href="#">Terms of Use</a>
+					<a href="#">Privacy</a>
+					<a href="#">Interest-based ads</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script type="text/javascript" src="data.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
