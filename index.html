@@ -2,27 +2,29 @@
 <html>
 <head>
 	<title>Etsy</title>
+	<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-	<header id="header" class="clearfix">
-		<div id="headRight" class="floatRight">
+	<header id="header">
+		<div id="headRight" >
 			<a href="#">Sell on Etsy</a>
 			<a href="#">Register</a>
-			<button>Sign In</button>
-			<a href="#">Cart</a>
+			<button id="signIn">Sign In</button>
+			<div class="divider"></div>
+			<a href="#" id="cartLink"><i class="fas fa-shopping-cart" id="cartIcon"></i>Cart</a>
 		</div>
-		<div id="headLeft" class="floatLeft flexParent">
-			<a href="#"><img src="http://placehold.it/50/50"/></a>
+		<div id="headLeft">
+			<a href="#"><img src="./assets/etsy.svg" class="etsyLogo" /></a>
 			<form>
 				<input type="text" name="search" id="search" placeholder="Search for items to shop" />
-				<button type="submit" name="searchButton" id="searchButton">search</button>
+				<button type="submit" name="searchButton" id="searchButton">Search</button>
 			</form>
 		</div>
 	</header>
 	<div id="categoryBar">
 		<ul>
-			<li>Jewelry &amp Accessories</li>
+			<li><span>Jewelry &amp Accessories</span></li>
 			<li>Clothing &amp Shoes</li>
 			<li>Home &amp Living</li>
 			<li>Wedding &amp Party</li>
@@ -34,8 +36,13 @@
 	</div> <!-- Category Bar -->
 	<div id="recommendations">
 		<ul>
-			<li>Whiskey Decanter</li>
-			<li>Whiskey Glasses</li>
+			<li><button class="recommendationButton">Whiskey Decanter</button></li>
+			<li><button class="recommendationButton">Whiskey Glasses</button></li>
+			<li><button class="recommendationButton">Whiskey Barrel</button></li>
+			<li><button class="recommendationButton">Whiskey Stones</button></li>
+			<li><button class="recommendationButton">Whiskey Glass</button></li>
+			<li><button class="recommendationButton">Whiskey Set</button></li>
+			<li><button class="recommendationButton">Whiskey Decanter Set</button></li>
 		</ul>
 	</div> <!-- Recommendations -->
 	<div id="main">
@@ -43,23 +50,38 @@
 			<div class="sideCategory" id="categoriesSide">
 				<h5>All Categories</h5>
 				<ul>
-					<li>Home &amp Living</li>
+					<li><a href="#">Home &amp Living</a></li>
+					<li><a href ="#">Art &amp Collectibles</a></li>
+					<li><a href ="#">Weddings</a></li>
+					<li><a href ="#">Clothing</a></li>
+					<li><a href="#" class="hiddenCategory categoryToggleItem">Paper &amp Party Supplies</a></li>
+					<li><a href="#" class="hiddenCategory categoryToggleItem">Jewelry</a></li> 
+					<li><a href="#" class="hiddenCategory categoryToggleItem">Craft Supplies &amp Tools</a></li> 
+					<li><a href="#" class="hiddenCategory categoryToggleItem">Accessories</a></li> 
+					<li><a href="#" class="hiddenCategory categoryToggleItem">Bags &amp Purses</a></li> 
+					<li><a href="#" class="hiddenCategory categoryToggleItem">Bath &amp Beauty</a></li> 
+					<li><a href="#" class="hiddenCategory categoryToggleItem">Books, Movies &amp Music</a></li> 
+					<li><a href="#" class="hiddenCategory categoryToggleItem">Shoes</a></li> 
+					<li><a href="#" class="hiddenCategory categoryToggleItem">Electronics &amp Accessories</a></li> 
+					<li><a href="#" class="hiddenCategory categoryToggleItem">Toys &amp Games</a></li> 
+					<li><a href="#" class="hiddenCategory categoryToggleItem">Pet Supplies</a></li> 
+
 				</ul>
-				<button>+Show more</button>
+				<button class="showToggle" id="categoryToggle">+Show more</button>
 			</div>
 			<div class="sideCategory" id="shippingSide">
 				<h5>Shipping</h5>
 				<div class="inputWrapper">
-					<input type="checkbox" name="freeShip" id="freeShip"/>
-					<label>Free shipping</label>
+					<input type="checkbox" name="shipping" id="freeShip"/>
+					<label><a href="#">Free shipping</a></label>
 				</div>
 				<div class="inputWrapper">
-					<input type="checkbox" name="oneDayShip" id="oneDayShip"/>
+					<input type="checkbox" name="shipping" id="oneDayShip"/>
 					<label>Ready to ship in 1 business day</label>
 				</div>
 				<div class="inputWrapper">
-					<input type="checkbox" name="threeDayShip" id="threeDayShip"/>
-					<label>Ready to ship in 3 business days</label>
+					<input type="checkbox" name="shipping" id="threeDayShip"/>
+					<label><a href="#"> Ready to ship in 3 business days</a></label>
 				</div>
 			</div>
 			<div class="sideCategory" id="offersSide">
@@ -72,54 +94,114 @@
 			<div class="sideCategory" id="colorSide">
 				<h5>Color</h5>
 				<div class="inputWrapper">
-					<input type="checkbox" name="clearChk" id="clearChk"/>
-					<label>Clear</label>
-				</div>	
+					<input type="checkbox" name="color" id="blackChk"/>
+					<label>Black</label>
+				</div>
 				<div class="inputWrapper">
-					<input type="checkbox" name="whiteChk" id="whiteChk"/>
+					<input type="checkbox" name="color" id="whiteChk"/>
 					<label>White</label>
 				</div>
 				<div class="inputWrapper">
-					<input type="checkbox" name="blackChk" id="blackChk"/>
-					<label>Black</label>
+					<input type="checkbox" name="color" id="brownChk"/>
+					<label>Brown</label>
 				</div>
-				<button>+Show more</button>
+				<div class="inputWrapper">
+					<input type="checkbox" name="color" id="clearChk"/>
+					<label>Clear</label>
+				</div>	
+				<div class="inputWrapper">
+					<input type="checkbox" name="color" id="redChk"/>
+					<label>Red</label>
+				</div>
+				<div class="inputWrapper colorToggleItem">
+					<input type="checkbox" name="color" id="blueChk"/>
+					<label>Blue</label>
+				</div>
+				<button class="showToggle" id="colorToggle">+Show more</button>
 			</div>
 			<div class="sideCategory" id="occasionSide">
 				<h5>Occasion</h5>
 				<div class="inputWrapper">
-					<input type="checkbox" name="wedding" id="wedding"/>
+					<input type="checkbox" name="occasion" id="wedding"/>
 					<label>Wedding</label>
 				</div>
 				<div class="inputWrapper">
-					<input type="checkbox" name="birthday" id="birthday"/>
+					<input type="checkbox" name="occasion" id="birthday"/>
 					<label>Birthday</label>
 				</div>
-				<button>+Show more</button>
+				<div class="inputWrapper">
+					<input type="checkbox" name="occasion" id="housewarming"/>
+					<label>Housewarming</label>
+				</div>
+				<div class="inputWrapper">
+					<input type="checkbox" name="occasion" id="anniversary"/>
+					<label>Anniversary</label>
+				</div>
+				<div class="inputWrapper">
+					<input type="checkbox" name="occasion" id="bachelorParty"/>
+					<label>Bachelor Party</label>
+				</div>
+				<div class="inputWrapper occasionToggleItem">
+					<input type="checkbox" name="occasion" id="bacheloretteParty"/>
+					<label>Bachelorette Party</label>
+				</div>
+				<button class="showToggle" id="occasionToggle">+Show more</button>
 			</div>
 			<div class="sideCategory" id="holidaySide">
 				<h5>Holiday</h5>
 				<div class="inputWrapper">
-					<input type="checkbox" name="christmas" id="christmas"/>
+					<input type="checkbox" name="holiday" id="christmas"/>
 					<label>Christmas</label>
 				</div>
 				<div class="inputWrapper">
-					<input type="checkbox" name="fathersDay" id="fathersDay"/>
+					<input type="checkbox" name="holiday" id="fathersDay"/>
 					<label>Father's Day</label>
 				</div>
-				<button>+Show more</button>
+				<div class="inputWrapper">
+					<input type="checkbox" name="holiday" id="valentine"/>
+					<label>Valentine's Day</label>
+				</div>
+				<div class="inputWrapper">
+					<input type="checkbox" name="holiday" id="stpatrick"/>
+					<label>St Patrick's Day</label>
+				</div>
+				<div class="inputWrapper">
+					<input type="checkbox" name="holiday" id="mothersDay"/>
+					<label>Mother's Day</label>
+				</div>
+				<div class="inputWrapper holidayToggleItem">
+					<input type="checkbox" name="holiday" id="newyear"/>
+					<label>New Year's</label>
+				</div>
+				<button class="showToggle" id="holidayToggle">+Show more</button>
 			</div>
 			<div class="sideCategory" id="materialSide">
 				<h5>Material</h5>
 				<div class="inputWrapper">
-					<input type="checkbox" name="glass" id="glass"/>
+					<input type="checkbox" name="material" id="glass"/>
 					<label>Glass</label>
 				</div>
 				<div class="inputWrapper">
-					<input type="checkbox" name="wood" id="wood"/>
+					<input type="checkbox" name="material" id="metal"/>
+					<label>Metal</label>
+				</div>
+				<div class="inputWrapper">
+					<input type="checkbox" name="material" id="ceramic"/>
+					<label>Ceramic</label>
+				</div>
+				<div class="inputWrapper">
+					<input type="checkbox" name="material" id="wood"/>
 					<label>Wood</label>
 				</div>
-				<button>+Show more</button>
+				<div class="inputWrapper">
+					<input type="checkbox" name="material" id="cork"/>
+					<label>Cork</label>
+				</div>
+				<div class="inputWrapper materialToggleItem">
+					<input type="checkbox" name="material" id="plastic"/>
+					<label>Plastic</label>
+				</div>
+				<button class="showToggle" id="materialToggle">+Show more</button>
 			</div>
 			<div class="sideCategory" id="personalSide">
 				<h5>Can be personalized</h5>
@@ -145,8 +227,10 @@
 				<div class="inputWrapper">
 					<input type="radio" name="radioLoc" id="customLoc"/>
 					<label>Custom</label>
-					<input type="text" name="customLocField" id="customLocField" placeholder="Enter location"/>
-					<button>&#9654</button>
+					<div>
+						<input type="text" name="customLocField" id="customLocField" placeholder="Enter location"/>
+						<button class="customInputButton">&#9654</button>
+					</div>
 				</div>
 			</div>
 			<div class="sideCategory" id="typeSide">
@@ -177,10 +261,12 @@
 				<div class="inputWrapper">
 					<input type="radio" name="radioPrice" id="customPrice"/>
 					<label>Custom</label>
-					<input type="text" name="customPriceMin" id="customPriceMin" placeholder="Low"/>
-					<span>To</span>
-					<input type="text" name="customPriceMax" id="customPriceMax" placeholder="High"/>
-					<button>&#9654</button>
+					<div>
+						<input type="text" name="customPriceMin" class="lowToHigh" id="customPriceMin" placeholder="Low"/>
+						<span>to</span>
+						<input type="text" name="customPriceMax" class="lowToHigh" id="customPriceMax" placeholder="High"/>
+						<button class="customInputButton">&#9654</button>
+					</div>
 				</div>
 			</div>
 			<div class="sideCategory" id="optionsSide">
@@ -196,7 +282,7 @@
 			</div>
 			<div class="sideCategory" id="shiptoSide">
 				<h5>Ships to</h5>
-				<select>
+				<select id="countrySelect">
 					<option>Choose country...</option>
 					<optgroup>
 						<option>Foo</option>
@@ -214,9 +300,9 @@
 			</div>
 		</div> <!-- Side Bar -->
 		<div id="mainContent">
-			<div id="aboveResults" class="clearfix">
-				<span class="floatLeft">All Categories</span>
-				<span class="floatRight">Sort by: Relevancy</span>
+			<div id="aboveResults">
+				<span id="">All Categories</span>
+				<span id="sortBy">Sort by: <span>Relevancy</span></span>
 			</div>
 			<div id="resultsContainer">
 				<div class="result">
@@ -289,27 +375,36 @@
 			</div>
 			<div id="footSocial">
 				<h4>Follow Etsy</h4>
-				<a href="#">Facebook</a>
-				<a href="#">Instagram</a>
-				<a href="#">Pinterest</a>
-				<a href="#">Twitter</a>
+				<a href="#"><i class="fab fa-facebook-square"></i> Facebook</a>
+				<a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+				<a href="#"><i class="fab fa-pinterest"></i> Pinterest</a>
+				<a href="#"><i class="fab fa-twitter"></i> Twitter</a>
 			</div>
 		</div> <!-- Footer Nav Links End -->
-		<div>
-			<span>Need help? Visit the <a href="#">help center</a></span>
+		<div class="flexParent" id="questionsLocale">
+			<span><i class="far fa-question-circle"></i> Need help? Visit the <a href="#">help center</a></span>
+			<div id="locale">
+				<span><i class="fas fa-globe"></i> United States </span>
+				<span class="divider"></span>
+				<span> English (US) </span>
+				<span class="divider"></span>
+				<span> $ (USD) </span>
+			</div>
 		</div>
-		<div id="bottom" class="clearfix">
-			<div class="floatLeft">
+		<div id="bottom" class="flexParent">
+			<div class="flexParent">
+				<a href="#"><img src="./assets/etsy.svg" class="etsyLogo" /></a>
 				<span>We make it easy to find your thing</span>
 			</div>
-			<div class="floatRight">
+			<div>
 				<span>&copy2018 Etsy, Inc.</span>
 				<a href="#">Terms of Use</a>
 				<a href="#">Privacy</a>
 				<a href="#">Interest-based ads</a>
 			</div>
 		</div>
-	</footer>
+	</footer><!-- Content End -->
+	<!--Scripts -->
 	<script type="text/javascript" src="data.js"></script>
 	<script type="text/javascript" src="main.js"></script>
 </body>
